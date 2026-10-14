@@ -1,2 +1,2 @@
 # CSLOR
-What is this? I don't know, though
+CSLOR (Control System Laboratory Open Recruitment) Timer is an easter egg made from HTML, CSS, and JS from scratch to help practician and assistant monitoring time. It was featured by Rita as an assistant. 

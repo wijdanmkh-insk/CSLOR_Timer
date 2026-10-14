@@ -10,24 +10,47 @@
 
     <body>
         <main>
-            <div class="container">
-                <div class="timer">
-                    <div id="quote"></div>
-                    <div class="countdown">
-                        <div id="minute">00</div>
-                        <div id="colon" class="">:</div>
-                        <div id="second">00</div>
+            <div class="anim-circle">
+                <div class="container">
+                    <div class="timer">
+                        <div id="quote" aria-live="polite"></div>
+                        <div class="countdown">
+                            <div id="minute" aria-label="Menit">05</div>
+                            <div id="colon" class="">:</div>
+                            <div id="second" aria-label="Detik">00</div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="toggle" class="button" type="button">Mulai</button>
                     </div>
                 </div>
-                <div class="buttons">
-                    <button id="start" class="button">Start</button>
-                    <button id="stop" class="button">Stop</button>
-                    <button id="reset" class="button">Reset</button>
-                </div>
+            </div>
 
-                <div class="date">
-                    
-                </div>
+            <aside class="duration-settings">
+                <button id="settings-toggle" class="settings-toggle" type="button"
+                    aria-expanded="false" aria-controls="duration-menu">
+                    Settings
+                </button>
+                <form id="duration-menu" class="duration-menu" hidden>
+                    <h2>Atur durasi</h2>
+                    <div class="duration-fields">
+                        <label for="duration-minute">Menit
+                            <input id="duration-minute" type="number" min="0" max="180" value="5">
+                        </label>
+                        <label for="duration-second">Detik
+                            <input id="duration-second" type="number" min="0" max="59" value="0">
+                        </label>
+                    </div>
+                    <button class="apply-duration" type="submit">Terapkan</button>
+                </form>
+            </aside>
+
+            <div id="story" class="story" hidden>
+                <img id="character" src="assets/1.png" alt="Karakter cerita">
+                <button id="dialog" class="dialog" type="button" aria-label="Lanjutkan dialog">
+                    <span id="dialog-text"></span>
+                    <span class="dialog-hint">Klik untuk lanjut</span>
+                </button>
             </div>
         </main>
     </body>
