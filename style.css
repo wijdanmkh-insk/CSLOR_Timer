@@ -205,9 +205,9 @@ body{
     width: auto;
     max-width: none;
 
-    right: 0;
+    right: 20%;
     bottom: 0;
-    top: 20%;
+    top: 50%;
 
     object-fit: contain;
     object-position: bottom right;
